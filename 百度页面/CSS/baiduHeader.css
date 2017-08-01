@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    min-width: 1000px;
+    min-height: 800px;
+    cursor: default;
+    background-color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.content header{
+    position: relative;
+    /*height: 100%;*/
+    width: 100%;
+    /*min-height: 768px;*/
+    cursor: default;
+}
+
+.content .header-nav-content{
+    width: 100%;
+    height: 34px;border-bottom: 1px solid #f2f2f2;
+}
+
+/*设置左边的导航部分*/
+.content .weather-wrapper,
+.content .message-wrapper{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    /*background-color: red;*/
+}
+
+
+.content  header .nav-left{
+    float: left;
+    margin-left: 20px;
+    height: 34px;
+    /*line-height: 34px;*/
+    cursor: pointer;
+    font-size: 13px;
+    color: #555;
+}
+
+.nav-left span{
+    display: inline-block;
+    height: 14px;
+    margin-right: 5px;
+    line-height: 14px;
+    /*background-color: yellowgreen;*/
+}
+
+.nav-left .air-quality{
+    font-weight: 800;
+    color: rgb(132,167,0);
+}
+
+.nav-left .weather-wrapper .nav-weather-bg{
+    width: 19px;
+    height: 19px;
+    background: url("../images/a7.png") no-repeat;
+}
+
+.nav-left .message-wrapper a{
+    color: #555;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+
+/*换肤*/
+#change-skine{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    display: none;
+    background-color: #fff;
+    z-index: 2000;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#change-skine .change-skine-nav{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #f2f2f2;
+    text-align: center;
+}
+
+#change-skine .change-skine-nav ul{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+}
+
+#change-skine .change-skine-nav ul li{
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    color: #555;
+    padding: 0 10px;
+}
+
+#change-skine .change-skine-nav ul li:hover{
+    background-color: rgb(40,131,255);
+    color: #fff !important;
+}
+
+.change-skine-clicked{
+    background-color: rgb(40,131,255);
+    color: #fff !important;
+}
+
+#change-skine .change-skine-content{
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#change-skine .change-skine-content div{
+    width: 80px;
+    height: 40px;
+    border: 1px solid #f2f2f2;
+}
+
+/*设置右边的导航部分*/
+.content .header-nav-content .nav-right{
+    float: right;
+    height: 34px;
+    line-height: 34px;
+}
+
+.content .header-nav-content .nav-right ul li{
+    float: left;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.content .header-nav-content .nav-right ul li a{
+    display: inline-block;
+    font-weight: bold;
+    color: #555;
+    font-size: 13px;
+}
+
+
+.content .header-nav-content .nav-right ul li #morePdu{
+    width: 80px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    background-color: rgb(40,108,248);
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.content #right_items{
+    display: none;
+    /*width: 80px;*/
+    /*height: 100%;*/
+    background: #f1f1f1;
+    position: absolute;
+    right:0;
+    top: 0;
+    text-align: center;
+
+}
+
+
+.content header nav .right-items ul{
+    width: 60px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    clear: both;
+    position: absolute;
+    left: 10px;
+}
+
+.content header nav .right-items ul li{
+    display: block;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.content header .right-items ul li i{
+    display: block;
+    margin: 5px auto;
+    background: url("../images/icon-logo.png");
+}
+
+.content header .right-items ul .right_item2 i{
+    width: 36px;
+    height: 36px;
+    background-position: 0 0;
+}
+
+.content header .right-items ul .right_item3 i{
+    width: 40px;
+    height: 36px;
+    background-position:-72px 0;
+}
+
+.content header .right-items ul .right_item4 i{
+    width: 34px;
+    height: 36px;
+    background-position: -112px 0;
+}
+
+.content header .right-items ul .right_item5 i{
+    width: 36px;
+    height: 36px;
+    background-position: -36px 0;
+}
+
+.content header .right-items ul .right_item6 i{
+    width: 34px;
+    height: 36px;
+    background-position: -148px 0;
+}
+
+.content header .right-items ul .right_item7 i{
+    width: 40px;
+    height: 36px;
+    background-position: -180px 0;
+}
+
+
+.content header .right-items ul li h4{
+    display: block;
+    width: 60px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+
+}
+
+.content header nav .right-items ul li:first-child{
+    height: 40px;
+    line-height: 40px;
+    /*垂直居中方法，ie9下不适用*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+/*设置用户/设置的下拉框*/
+.content header nav .nav-right .user-info{
+    position: relative;
+}
+
+.content header nav .nav-right .user-info:hover .down-message{
+    display: block;
+}
+
+.content header nav .nav-right .down-message{
+    clear: both;
+    display: none;
+    width: 70px;
+    height: auto;
+    /*background-color: aliceblue;*/
+    text-align: center;
+    position: absolute;
+    top: 34px;
+    left: -18px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+}
+
+
+
+.content header nav .nav-right .down-message i{
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin-bottom: -2px;
+    border-top: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+    position: absolute;
+    top: -4px;
+    left: 31px;
+}
+
+.content header nav .nav-right .down-message i::after{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin-bottom: -2px;
+    background-color: #fff;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-animation: rotate 1s ease normal;
+    z-index: 99;
+}
+
+.content header nav .nav-right .down-message a{
+    display: block;
+    margin: 5px auto;
+    padding: 3px 0;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: normal;
+}
+
+.content header nav .nav-right .down-message a:hover{
+    display: block;
+    color: #fff;
+    background-color: rgb(34,103,246);
+}
+
+/*设置百度logo*/
+.content nav .baidu-logo{
+    width: 100%;
+    height: 131px;
+    text-align: center;
+}
+
+
+/*百度搜索框*/
+.content .baidu-search{
+    z-index: 1000;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.content .baidu-search .search-top-logo{
+    position: relative;
+    top: -30px;
+    margin-right: 20px;
+}
+
+.content .baidu-search input{
+    width: 550px;
+    height: 36px;
+    text-indent: 5px;
+    float: left;
+    border: 1px solid #ccc;
+    outline: 0;
+    line-height: 36px\9;
+}
+
+.content .baidu-search input:hover{
+    border-color: #999;
+}
+
+.content .baidu-search input:focus{
+    border-color: blue;
+}
+
+
+.content .baidu-search form .recode{
+    position: absolute;
+    top: 10px;
+    right: 135px;
+    width: 20px;
+    height:20px;
+    background: url("../images/voice.png") no-repeat;
+    cursor: pointer;
+    border-right: 1px solid #eeeeee;
+
+}
+
+
+.content .baidu-search form .photo{
+    position: absolute;
+    top: 10px;
+    right: 108px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/camera_new_5606e8f.png") no-repeat;
+    cursor: pointer;
+}
+
+.content .baidu-search form .photo:hover{
+    background-position: 0 -20px;
+}
+
+
+.content .baidu-search button{
+    width: 100px;
+    height: 38px;
+    background-color: rgb(39, 101, 240);
+    color: white;
+    border: none;
+    font-size: 16px;
+    float: left;
+    cursor: pointer;
+}
+
+
+.content .baidu-search button:hover{
+    background-color: #060871;
+}
+
+
+.content .baidu-search form{
+    display: inline-block;
+    width: 652px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.baudu-search-top{
+    z-index: 1000;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 5px #888;
+    border-bottom: 1px solid #888\9;
+    _border-bottom: 0;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.95)),to(rgba(255,255,255,.95))) !important;
+    background-image: -moz-linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.95) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.95) 100%) !important;
+    background-image: -o-linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.95) 100%) !important;
+    background-image: linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.95) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2ffffff,endColorstr=#f2ffffff) !important;
+}

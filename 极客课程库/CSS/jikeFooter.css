@@ -1,0 +1,164 @@
+.footer{
+    width: 100%;
+    height: 300px;
+    /*border-top: 1px solid #e4e4e4;*/
+    background: #fff;
+    float: left;
+    /*overflow: hidden;*/
+}
+
+
+
+
+.footer .jkinfor-block{
+    width: 1000px;
+    height: 215px;
+    padding: 0;
+    margin: 0 auto;
+    /*border-top: 1px solid #e4e4e4;*/
+    /*background: #fff;*/
+    /*float: left;*/
+    /*background-color: lavender;*/
+}
+
+
+
+.footer .jkinfor-block .jkinfor{
+    position: relative;
+    width: 1000px;
+    height: 215px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f5f5f5;
+    padding-left: 224px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+.footer .jkinfor-block .jkinfor .jk-logo {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: inline-block;
+    width: 160px;
+}
+
+.footer .jkinfor-block .jkinfor .jk-logo  img{
+    width: 109px;
+    height: 40px;
+}
+
+.footer .jkinfor-block .jkinfor .jk-logo p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.footer .jkinfor dl {
+    width: 135px;
+    color: #808080;
+    float: left;
+}
+.footer .jkinfor dl dt {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footer .jkinfor dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.footer .jkinfor dl dd a {
+    color: #999999;
+}
+
+.footer .jkinfor a:hover {
+    color: #35b558;
+}
+
+.footer .jk-down .hot-tel {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer .jk-down .downCon {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 13px;
+    padding-left: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.footer .jk-down .down-ios {
+    background: url(../images/icon-down-ios.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+.footer .jk-down .down-and {
+    background: url(../images/icon-down-and.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+.footer .jk-down .downCon img {
+    width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2000;
+    display: none;
+    vertical-align: middle;
+}
+
+.footer .jk-down .downCon:hover img {
+    display: block;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    height: 83px;
+    text-align: center;
+    padding: 15px 0 0 0;
+    /*background-color: #1abc9c;*/
+
+}
+
+.footer .copyright strong {
+    font-weight: 400;
+}
+
+.footer .copyright a {
+    color: #999;
+}
+.footer .copyright a:hover {
+    color: #35B558;
+}
+
+
+.footer .copyright a.down-sina {
+    float: right;
+    height: 15px;
+    width: 20px;
+    margin-right: 10px;
+    background: url(../images/icon-down-sina.png)no-repeat 0 0;
+    background-size: 20px 15px;
+}
+
+.footer .copyright a.down-wechat {
+    float: right;
+    height: 15px;
+    width: 20px;
+    background: url(../images/icon-down-wechat.png)no-repeat 0 0;
+    background-size: 18px 15px;
+}

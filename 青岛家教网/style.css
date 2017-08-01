@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(11,99,129);
+    font-size: 13px;
+}
+
+
+input{
+    height: 20px;
+}
+
+.w-1000{
+    width: 800px;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.content{
+    margin: 0 auto;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logo-content{
+    width: 800px;
+    height: 100px;
+    /*background: #f32f2f;*/
+}
+
+.content .logo-content .logo{
+    margin-left: 40px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.content .logo-content .register{
+    float: right;
+    margin-right: 40px;
+    /*background: yellow;*/
+    margin-top: 76px;
+}
+
+.content .logo-content .register a{
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(255, 0, 153);
+}
+
+.content table{
+    margin: 0 auto;
+    border: 0.5px solid #bfbfbf;
+    margin-top: 30px;
+
+}
+
+.content table td{
+    height: 25px;
+    text-align: right;
+    padding: 5px;
+}

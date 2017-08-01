@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sea.js</title>
+
+</head>
+<body>
+
+
+<script src="js/sea.js" type="text/javascript"></script>
+
+<script>
+    // seajs 的简单配置  入口地址   模块化
+    seajs.config({
+        base: "./js/",
+        alias: {
+            "jquery": "jquery.js"
+        }
+    });
+    // 加载入口模块
+    seajs.use("./js/main")
+</script>
+
+</body>
+</html>

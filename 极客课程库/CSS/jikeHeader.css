@@ -1,0 +1,629 @@
+.header img,
+.header ul,
+.header nav,
+.header div,
+.header span,
+.header a,
+.header i,
+.header h3 {
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-family: Verdana,"Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+}
+
+
+.header {
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+
+}
+
+.header .w-1000 {
+    height: 60px;
+    width: 1000px;
+    line-height: 60px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.header .w-1000 .logo {
+    width: 109px;
+    display: inline-block;
+    margin-right: 60px;
+    height: 60px;
+    float: left;
+}
+
+.header .w-1000 .logo img {
+    float: left;
+    width: 109px;
+    margin-top: 10px;
+    border:0 none;
+}
+
+.header .w-1000 nav {
+    height: 60px;
+    display: inline-block;
+    float: left;
+}
+
+.header .w-1000 nav a {
+    color: #333;
+}
+
+#header .w-1000 nav a:hover {
+    color: #35b558;
+}
+
+.header .w-1000  nav li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    float: left;
+}
+
+.header nav li i {
+    margin-left: 5px;
+}
+
+.header nav li .arrow-icon {
+    margin-bottom: 4px;
+}
+
+.header nav li:hover {
+    color: #35b558;
+    cursor: pointer;
+}
+
+.header nav li:hover i.arrow-icon {
+    margin-bottom: -2px;
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+
+@keyframes rotate {
+    0% {
+        margin-bottom: 4px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+    }
+    10% {
+        margin-bottom: -2px;
+    }
+    100% {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+}
+.header nav .submenu {
+    display: none;
+    opacity:0;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+}
+
+.header nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    animation: myfirst 0.5s ease alternate;
+    -moz-animation: myfirst 0.5s ease alternate;
+    -webkit-animation: myfirst 0.5s ease alternate;
+}
+
+@keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes myfirst
+    /* Firefox */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes myfirst
+    /* Safari and Chrome */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes myfirst
+    /* Opera */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header nav li:last-child {
+    margin-right: 0;
+}
+
+
+
+.header nav .submenu h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.header nav .submenu a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    white-space:normal;
+}
+
+.header nav .submenu a:last-child {
+    padding-bottom: 10px;
+}
+
+.header nav .school-list a:hover {
+    color:#35b558 ;
+}
+
+.header nav .vip-lesson {
+    padding: 10px 0;
+}
+
+.header nav .vip-lesson a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+.header nav .vip-lesson a span {
+    color: #bbb;
+    float: right;
+}
+
+.header nav .vip-lesson a:hover {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #fafafa;
+    color: #35b558;
+}
+
+/*设置下拉框图标*/
+/* 职业学院iocn*/
+.school-list i.python-icon,
+.school-list i.go-icon,
+.school-list i.ios-icon,
+.school-list i.wechat-icon {
+    background: url("../images/allicon4.png") 0 0 no-repeat ;
+    background-position: 0 0;
+    background-size: 16px 148px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px!important;
+}
+
+.school-list i.python-icon {
+    background-position: -2px -2px;
+}
+
+.school-list i.go-icon {
+    background-position: -2px -38px;
+}
+
+.school-list i.ios-icon {
+    background-position: -2px -82px;
+}
+
+.school-list i.wechat-icon {
+    background-position: -2px -60px;
+}
+
+.school-list i.web-icon,
+.school-list i.android-icon,
+.vip-lesson i{
+    background: url("../images/allicon.png") 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px!important;
+}
+
+.school-list i.web-icon{
+    background-position: -15px -27px;
+}
+.school-list i.android-icon{
+    background-position: -45px -14px;
+}
+.vip-lesson i.kck-icon{
+    background-position: 0 -13px;
+}
+.vip-lesson i.zyljt-icon{
+    background-position: -45px 0;
+}
+.vip-lesson i.zstxt-icon{
+    background-position: -30px -13px;
+}
+.vip-lesson i.xlkc-icon{
+    background: url("../images/xlkc2.png") 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+.vip-lesson i.kcbq-icon{
+    background-position: -15px -13px;
+}
+.vip-lesson i.vip-icon{
+    background-position: -16px 0;
+}
+.vip-lesson i.jswd-icon{
+    background-position: 0 -27px;
+}
+.vip-lesson i.wiki-icon{
+    background-position: -29px -27px;
+}
+.vip-lesson i.sq-icon{
+    background-position: 0 2px;
+}
+.vip-lesson i.zygx-icon{
+    background-position: -30px 0;
+}
+
+/*右边的搜索 注册登录*/
+.header .icon-box {
+    float: right;
+    text-align: right;
+    width: 200px;
+    margin-right: 10px;
+    height: 60px;
+    /*background-color: #3c7cdf;*/
+}
+
+.header .icon-box span {
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+/*二维码*/
+.header .icon-box i.top-icon{
+    display: inline-block;
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    margin-bottom: -2px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+
+.header .icon-box .app-icon {
+    background: url("../images/app-icon.png") 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+    z-index: 2000;
+
+}
+
+.header .icon-box .app-icon:hover {
+    background: url("../images/app-icon2.png") 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+
+}
+
+/*二维码 正常状态*/
+.header .icon-box .app-icon .submenu {
+    display: none;
+    opacity: 0;
+    width: 150px;
+    height: 210px;
+    padding: 0;
+    position: relative;
+    top: 59px;
+    left: -75px;
+
+}
+
+.header .icon-box .app-icon .submenu img {
+    width: 100%;
+}
+
+.header .icon-box .app-icon .submenu .top-icon {
+    position: absolute;
+    top: -8px;
+    right: 60px;
+}
+
+/*显示*/
+.header .icon-box .app-icon:hover .submenu{
+    display: block;
+    opacity: 1;
+    z-index: 3000;
+}
+
+/*设置登录按钮相关*/
+.header .icon-box .login-icon {
+    background: url("../images/login-icon.png") 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+}
+
+
+.header .icon-box .login-icon .submenu{
+    display: none;
+    opacity: 0;
+    padding: 10px 0;
+    background: #fff;
+    position: relative;
+    width: 120px;
+    line-height: 30px;
+    z-index: 1200;
+    top: 59px;
+    left: -100px;
+    text-align: center;
+}
+
+.header #loginlist a{
+    display: block;
+    padding: 0 10px;
+    text-align: left;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    color: #666;
+}
+
+.header #loginlist .reg-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.header #loginlist .login-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.header #loginlist a:hover {
+    height: 35px;
+    line-height: 35px;
+    background: #f5f5f5;
+    color: #35b558;
+}
+
+.header #loginlist i.top-icon{
+    position: absolute;
+    top: -8px;
+    right: 8px;
+}
+
+.header .login-icon:hover .submenu{
+    display: block;
+    opacity: 1;
+    z-index: 2000;
+}
+
+.header .loginlist dd i,
+.uservip-icon {
+    background: url("../images/allicon2.png") 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.uservip-icon {
+    background: url("../images/allicon2.png") 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    left: 15px;
+}
+
+.header .rz-icon {
+    background-position: -1px -47px;
+}
+
+.header .year-icon {
+    background-position: -1px -32px;
+}
+
+.header .month-icon {
+    background-position: -1px -16px
+}
+
+.header .ty-icon {
+    background-position: -1px -1px
+}
+
+.header .xf-icon {
+    background-position: -16px -47px
+}
+
+.header .loginlist .xxzx-icon {
+    background-position: -16px -15px
+}
+
+.header .loginlist .grzy-icon {
+    background-position: -45px -1px
+}
+
+.header .loginlist .xxtz-icon {
+    background-position: -16px -30px
+}
+
+.header .loginlist .zhsz-icon {
+    background-position: -30px -1px
+}
+
+.header .loginlist .tc-icon {
+    background-position: -16px -1px
+}
+
+
+
+
+
+
+
+.web_search_header {
+    border: none;
+    outline: none;
+}
+
+.header .search-icon {
+    background: url("../images/search-icon.png") 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+}
+
+.header .search-icon:hover {
+    background: url("../images/search-icon2.png") 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+/*导航搜索框*/
+.header .searchbox {
+    display: none;
+    opacity: 1;
+    transform: scale(0.1, 1);
+    -moz-transform: scale(0.1, 1);
+    transition-duration:0.3s;
+    height: 59px;
+    line-height: 59px;
+    width: 850px;
+    background: #fff;
+    position: absolute;
+    z-index: 11000;
+    top: 0;
+    right: 0;
+    white-space: normal;
+}
+
+.header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 13px;
+    vertical-align: top;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+}
+
+.header .searchbox .tagbox {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+
+.header .searchbox .tagbox a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+.header .searchbox .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url("../images/close-icon.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+
+
+/*设置搜索框*/
+/*.header #searchbox{*/
+    /*clear: both;*/
+    /*display: block;*/
+    /*opacity: 1;*/
+    /*width: 840px;*/
+    /*height: 60px;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*z-index: 10000;*/
+    /*background-color: #35b558;*/
+/*}*/

@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <script src="./dist/js/jquery-3.1.1.js"></script>
+    <link href="./dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="./dist/js/bootstrap.js"></script>
+    <link href="./cssstyle/style.css" rel="stylesheet" type="text/css">
+    <title>面试题大全</title>
+</head>
+<body>
+<!--http://www.codeceo.com/article/web-interview-collection.html-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">面试题库</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://www.cnblogs.com/wangking/p/5881149.html">HTML/CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">其它</a></li>
+                <li>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-success">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#" id="myhtml">HTML/CSS部分<span class="sr-only">(current)</span></a></li>
+                <li><a href="#" id="myjs">JavaScript</a></li>
+                <li><a href="#">其他</a></li>
+
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">HTML 部分</a></li>
+                <li><a href="">CSS 部分</a></li>
+                <li><a href="">JS 部分</a></li>
+                <li><a href="">AJAX 部分</a></li>
+            </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="htmlcss">
+            <h1 class="page-header">HTML/CSS部分</h1>
+            <h4 class="text-left">1、什么是盒子模型？</h4>
+            <p class="text-left">在网页中，一个元素占有空间的大小由几个部分构成，
+                其中包括元素的内容（content），元素的内边距（padding），元素的边框（border），
+                元素的外边距（margin）四个部分。这四个部分占有的空间中，有的部分可以显示相应的内容，
+                而有的部分只用来分隔相邻的区域或区域。4个部分一起构成了css中元素的盒模型。
+            </p>
+            <h4 class="text-left">2、行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h4>
+            <p class="text-left">
+                行内元素：a、b、span、img、input、strong、select、label、em、button、textarea<br/>
+                块级元素：div、ul、li、dl、dt、dd、p、h1-h6、blockquote<br/>
+                空元素：即系没有内容的HTML元素，例如：br、meta、hr、link、input、img
+            </p>
+            <h4 class="text-left">
+                3、CSS实现垂直水平居中
+            </h4>
+            <p class="text-left">
+                一道经典的问题，实现方法有很多种，以下是其中一种实现：
+                <h5 class="text-left">HTML结构：</h5>
+                <pre class="text-left">
+&lt;div class="wrapper"&gt;
+      &lt;div class="content"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+                <h5 class="text-left">CSS：</h5>
+                <pre class="text-left">
+.wrapper{position:relative;}
+.content{
+	background-color:#6699FF;
+	width:200px;
+	height:200px;
+	position: absolute; //父元素需要相对定位
+	top: 50%;
+	left: 50%;
+	margin-top:-100px ;   //二分之一的height，width
+	margin-left: -100px;
+}
+                </pre>
+            </p>
+            <h4 class="text-left">
+                4、简述一下src与href的区别
+            </h4>
+            <p class="text-left">
+                href 是指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，用于超链接。<br/>
+                src是指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指
+                向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的
+                下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。
+                这也是为什么将js脚本放在底部而不是头部。
+            </p>
+            <h4 class="text-left">
+                5、什么是CSS Hack?
+            </h4>
+            <p class="text-left">
+                一般来说是针对不同的浏览器写不同的CSS,就是 CSS Hack。<br/>
+                IE浏览器Hack一般又分为三种，条件Hack、属性级Hack、选择符Hack（详细参考CSS文档：css文档）。例如：
+                 <pre>
+// 1、条件Hack
+&lt;!--[if IE]&gt;
+    &lt;style>
+.test{color:red;}
+&lt;/style>
+&lt;![endif]--&gt;
+// 2、属性Hack
+.test{
+    color:#090\9; /* For IE8+ */
+    *color:#f00;  /* For IE7 and earlier */
+    _color:#ff0;  /* For IE6 and earlier */
+}
+// 3、选择符Hack
+* html .test{color:#090;}       /* For IE6 and earlier */
+* + html .test{color:#ff0;}     /* For IE7 */
+                </pre>
+            </p>
+            <h4 class="text-left">
+                6、简述同步和异步的区别
+            </h4>
+            <p class="text-left">
+                同步是阻塞模式，异步是非阻塞模式。<br/>
+                同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直
+                等待下去，直到收到返回信息才继续执行下去；<br/>
+                异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会
+                通知进程进行处理，这样可以提高执行的效率。
+            </p>
+            <h4 class="text-left">
+                7、px和em的区别
+            </h4>
+            <p class="text-left">
+                px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，
+                并且em会继承父级元素的字体大小。<br/>
+                浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em
+            </p>
+            <h4 class="text-left">
+                8、什么叫优雅降级和渐进增强？
+            </h4>
+            <p class="text-left">
+                渐进增强 progressive enhancement：<br/>
+                针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br/>
+
+                优雅降级 graceful degradation：<br/>
+                一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。<br/>
+                区别：<br/>
+                a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给<br/>
+                b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要<br/>
+                c. 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带<br/>
+            </p>
+            <h4 class="text-left">
+                9、浏览器的内核分别是什么?
+            </h4>
+            <p class="text-left">
+                IE: trident内核<br/>
+                Firefox：gecko内核<br/>
+                Safari：webkit内核<br/>
+                Opera：以前是presto内核，Opera现已改用Google Chrome的Blink内核<br/>
+                Chrome：Blink(基于webkit，Google与Opera Software共同开发)<br/>
+            </p>
+            <h4 class="text-left">
+                10. 说下行内元素和块级元素的区别?行内块元素的兼容性使用?
+            </h4>
+            <p class="text-left">
+                (IE8 以下)<br/>
+                　　行内元素：会在水平方向排列，不能包含块级元素，设置width无效，height无效(可以设置line-height)，margin上下无效，
+                padding上下无效。 块级元素：各占据一行，垂直方向排列。从新行开始结束接着一个断行。
+                兼容性：display:inline-block;display:inline;zoom:1;
+            </p>
+            <h4 class="text-left">
+                11. 清除浮动有哪些方式?比较好的方式是哪一种?
+            </h4>
+            <p class="text-left">
+                    (1)父级div定义height。<br/>
+                　　(2)结尾处加空div标签clear:both。<br/>
+                　　(3)父级div定义伪类:after和zoom。<br/>
+                　　(4)父级div定义overflow:hidden。<br/>
+                　　(5)父级div定义overflow:auto。<br/>
+                　　(6)父级div也浮动，需要定义宽度。<br/>
+                　　(7)父级div定义display:table。<br/>
+                　　(8)结尾处加br标签clear:both。<br/>
+                　　总结：比较好的是第3种方式，简洁方便。
+            </p>
+            <h4 class="text-left">
+                12. box-sizing常用的属性有哪些?分别有什么作用? 常用的属性：box-sizing: content-box border-box inherit;
+            </h4>
+            <p class="text-left">
+                作用：content-box:宽度和高度分别应用到元素的内容框。在宽度和高度之外绘制元素的内边距和边框(元素默认效果)。<br/>
+                　　border-box:元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和
+                内边距才能得到内容的宽度和高度。
+            </p>
+            <h4 class="text-left">
+                13. Doctype作用?标准模式与兼容模式各有什么区别?
+            </h4>
+            <p class="text-left">
+                (Q1) 告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。<br/>
+                　　(Q2) 标准模式的排版和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,
+                模拟老式浏览器的行为以防止站点无法工作。
+            </p>
+            <h4 class="text-left">
+                14. HTML5 为什么只需要写 < Doctype html>?
+            </h4>
+            <p class="text-left">
+                HTML5不基于 SGML，因此不需要对DTD进行引用;但是需要doctype来规范浏览器的行为(让浏览器按照它们应该的方式来运行)。
+                而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。
+            </p>
+            <h4 class="text-left">
+                15. 页面导入样式时，使用link和@import有什么区别?
+            </h4>
+            <p class="text-left">
+                (1)link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用;而@import是CSS提供的，只能用于加载CSS;<br/>
+                (2)页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面
+                　　被加载完再加载;<br/>
+                (3)import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题。<br/>
+                总之，link要优于@import。
+            </p>
+            <h4 class="text-left">
+                16. html5有哪些新特性?如何处理HTML5新标签的浏览器兼容问题?如何区分 HTML 和 HTML5?
+            </h4>
+            <p class="text-left">
+                   (Q1) HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br/>
+                　　(1)绘画 canvas;<br/>
+                　　(2)用于媒介回放的 video 和 audio 元素;<br/>
+                　　(3)本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br/>
+                　　(4)sessionStorage 的数据在浏览器关闭后自动删除;<br/>
+                　　(5)语意化更好的内容元素，比如 article、footer、header、nav、section; <br/>
+                    (6)表单控件，calendar、date、time、email、url、search;<br/>
+                　　(7)新的技术webworker, websocket, Geolocation;<br/>
+                　　(Q2) IE8/IE7/IE6支持通过document.createElement方法产生的标签， 可以利用这一特性让这些浏览器支持HTML5新标签，
+                浏览器支持新标签后，还需要添加标签默认的样式。 也可以直接使用成熟的框架、比如html5shim，
+            </p>
+            <h4 class="text-left">
+                17. 简述一下你对HTML语义化的理解?
+            </h4>
+            <p class="text-left">
+                用正确的标签做正确的事情。<br/>
+                　　1. html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br/>
+                　　2. 即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的; 搜索引擎的爬虫也依赖于HTML标记来确定上
+                下文和各个关键字的权重，利于SEO;<br/>
+                　　3. 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。<br/>
+            </p>
+            <h4 class="text-left">
+                18 ##常见兼容性问题?
+            </h4>
+            <p class="text-left">
+                png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.<br/>
+                　　浏览器默认的margin和padding不同。解决方案是加一个全局的<br/>
+                　　{margin:0;padding:0;}来统一。 IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。 浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}<br/>
+                　　这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别) 渐进识别的方式，从总体中逐渐排除局部。<br/>
+                　　首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。 接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。 css .bb{ background-color:#f1ee18;/所有识别<br/>
+                　　/ .background-color:#00deff\9; /IE6、7、8识别<br/>
+                　　/ +background-color:#a200ff;/IE6、7识别<br/>
+                　　/ _background-color:#1e0bd1;/IE6识别/ }<br/>
+                　　IE下,可以使用获取常规属性的方法来获取自定义属性,也可以使用<br/>
+                　　getAttribute()获取自定义属性;Firefox下,只能使用getAttribute()获取自定义属性. 解决方法:统一通过getAttribute()获取自定义属性. IE下,even对象有x,y属性,但是没有pageX,pageY属性; Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.<br/>
+                　　解决方法：(条件注释)缺点是在IE浏览器下可能会增加额外的HTTP请求数。 Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示, 可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决.<br/>
+                　　超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺<br/>
+                　　序:L-V-H-A : a:link {} a:visited {} a:hover {} a:active {}
+            </p>
+            <h4 class="text-left">
+                19.HTML5的离线储存，描述一下 cookies，
+            </h4>
+            <p class="text-left">
+                    sessionStorage 和 localStorage 的区别?<br/>
+                　　cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会<br/>
+                　　sessionStorage和localStorage的存储空间更大;<br/>
+                　　sessionStorage和localStorage有更多丰富易用的接口;<br/>
+                　　sessionStorage和localStorage各自独立的存储空间;<br/>
+            </p>
+            <h4 class="text-left">
+               20、 介绍一下CSS的盒子模型?
+            </h4>
+            <p class="text-left">
+                (1)有两种， IE 盒子模型、标准 W3C 盒子模型;IE的content部分包含了 border 和 pading;<br/>
+                (2)盒模型： 内容(content)、填充(padding)、边界(margin)、 边框 (border).
+            </p>
+            <h4 class="text-left">
+                21、请描述一下 cookies，sessionStorage 和 localStorage 的区别？
+            </h4>
+            <p class="text-left">
+                cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。<br/>
+                cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。<br/>
+                sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。<br/>
+
+                存储大小：<br/>
+                cookie数据大小不能超过4k。<br/>
+                sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。<br/>
+
+                有期时间：<br/>
+                localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br/>
+                sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br/>
+                cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+            </p>
+            <h4 class="text-left">
+                22、iframe有那些缺点？
+            </h4>
+            <p class="text-left">
+                *iframe会阻塞主页面的Onload事件；<br/>
+                *搜索引擎的检索程序无法解读这种页面，不利于SEO;<br/>
+                *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。<br/>
+                使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript<br/>
+                动态给iframe添加src属性值，这样可以绕开以上两个问题。<br/>
+            </p>
+            <h4 class="text-left">
+                23、Label的作用是什么？是怎么用的？
+            </h4>
+            <p class="text-left">
+                label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。<br/>
+                &lt;label for="Name"&gt;Number:&lt;/label&gt;<br/>
+                &lt;input type=“text“name="Name" id="Name"/&gt;<br/>
+                &lt;label&gt;Date:&lt;input type="text" name="B"/>&lt;/label&gt;
+            </p>
+            <h4 class="text-left">
+                24、HTML5的form如何关闭自动完成功能？
+            </h4>
+            <p class="text-left">
+                给不想要提示的 form 或某个 input 设置为 autocomplete=off。
+            </p>
+            <h4 class="text-left">
+                25、如何实现浏览器内多个标签页之间的通信? (阿里)
+            </h4>
+            <p class="text-left">
+                WebSocket、SharedWorker；<br/>
+                也可以调用localstorge、cookies等本地存储方式；<br/><br/>
+
+                localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，<br/>
+                我们通过监听事件，控制它的值来进行页面信息通信；<br/>
+                注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；
+            </p>
+            <h4 class="text-left">
+                26、webSocket如何兼容低浏览器？(阿里)
+            </h4>
+            <p class="text-left">
+                Adobe Flash Socket 、<br/>
+                ActiveX HTMLFile (IE) 、<br/>
+                基于 multipart 编码发送 XHR 、<br/>
+                基于长轮询的 XHR
+            </p>
+            <h4 class="text-left">
+                27、页面可见性（Page Visibility API） 可以有哪些用途？
+            </h4>
+            <p class="text-left">
+                通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;<br/>
+                在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
+            </p>
+            <h4 class="text-left">
+                38、如何在页面上实现一个圆形的可点击区域？
+            </h4>
+            <p class="text-left">
+                1、map+area或者svg<br/>
+                2、border-radius<br/>
+                3、纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等
+            </p>
+            <h4 class="text-left">
+                29、实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。
+            </h4>
+            <p class="text-left">
+                &lt; div style="height:1px;overflow:hidden;background:red"&gt;&lt; /div&gt;
+            </p>
+            <h4 class="text-left">
+                30、网页验证码是干嘛的，是为了解决什么安全问题。
+            </h4>
+            <p class="text-left">
+                区分用户是计算机还是人的公共全自动程序。可以防止恶意破解密码、刷票、论坛灌水；<br/>
+                有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。
+            </p>
+            <h4 class="text-left">
+                31、title与h1的区别、b与strong的区别、i与em的区别？
+            </h4>
+            <p class="text-left">
+                title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；<br/><br/>
+                strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：<strong>会重读，而<B>是展示强调内容。<br/><br/>
+                i内容展示为斜体，em表示强调的文本；<br/><br/>
+                Physical Style Elements -- 自然样式标签<br/>
+                b, i, u, s, pre<br/>
+                Semantic Style Elements -- 语义样式标签<br/>
+                strong, em, ins, del, code<br/>
+                应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。<br/>
+            </p>
+            <h4 class="text-left">
+                32、介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？
+            </h4>
+            <p class="text-left">
+                （1）有两种， IE 盒子模型、W3C 盒子模型；<br/>
+                （2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；<br/>
+                （3）区  别： IE的content部分把 border 和 padding计算了进去;
+            </p>
+            <h4 class="text-left">
+                33、CSS选择符有哪些？哪些属性可以继承？
+            </h4>
+            <p class="text-left">
+                *  1.id选择器（ # myid）<br/>
+                2.类选择器（.myclassname）<br/>
+                3.标签选择器（div, h1, p）<br/>
+                4.相邻选择器（h1 + p）<br/>
+                5.子选择器（ul > li）<br/>
+                6.后代选择器（li a）<br/>
+                7.通配符选择器（ * ）<br/>
+                8.属性选择器（a[rel = "external"]）<br/>
+                9.伪类选择器（a:hover, li:nth-child）<br/><br/>
+                *   可继承的样式： font-size font-family color, UL LI DL DD DT;<br/><br/>
+                *   不可继承的样式：border padding margin width height ;<br/><br/>
+            </p>
+            <h4 class="text-left">
+                34、CSS优先级算法如何计算？
+            </h4>
+            <p class="text-left">
+                *   优先级就近原则，同权重情况下样式定义最近者为准;<br/><br/>
+                *   载入样式以最后载入的定位为准;<br/><br/>
+                优先级为:<br/>
+                !important >  id > class > tag<br/>
+                important 比 内联优先级高
+            </p>
+            <h4 class="text-left">
+                35、CSS3新增伪类有那些？
+            </h4>
+            <p class="text-left">
+            举例：<br/>
+            p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。<br/>
+            p:last-of-type  选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。<br/>
+            p:only-of-type  选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。<br/>
+            p:only-child        选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。<br/>
+            p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。<br/>
+
+            :after          在元素之前添加内容,也可以用来做清除浮动。<br/>
+            :before         在元素之后添加内容<br/>
+            :enabled<br/>
+            :disabled       控制表单控件的禁用状态。<br/>
+            :checked        单选框或复选框被选中。<br/>
+            </p>
+            <h4 class="text-left">
+                36、如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？
+            </h4>
+            <p class="text-left">
+                给div设置一个宽度，然后添加margin:0 auto属性
+            <pre>
+div{
+    width:200px;
+    margin:0 auto;
+}
+            </pre>
+                居中一个浮动元素<br/>
+
+                确定容器的宽高 宽500 高 300 的层<br/>
+                设置层的外边距<br/>
+            <pre>
+.div {
+     width:500px ; height:300px;//高度可以不设
+     margin: -150px 0 0 -250px;
+     position:relative;         //相对定位
+     background-color:pink;     //方便看效果
+     left:50%;
+      top:50%;
+}
+             </pre>
+                让绝对定位的div居中<br/>
+             <pre>
+{
+      position: absolute;
+      width: 1200px;
+      background: none;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+}
+             </pre>
+            </p>
+            <h4 class="text-left">
+                37、display有哪些值？说明他们的作用。
+            </h4>
+            <p class="text-left">
+                block         块类型。默认宽度为父元素宽度，可设置宽高，换行显示。<br/>
+                none          缺省值。象行内元素类型一样显示。<br/>
+                inline        行内元素类型。默认宽度为内容宽度，不可设置宽高，同行显示。<br/>
+                inline-block  默认宽度为内容宽度，可以设置宽高，同行显示。<br/>
+                list-item     象块类型元素一样显示，并添加样式列表标记。<br/>
+                table         此元素会作为块级表格来显示。<br/>
+                inherit       规定应该从父元素继承 display 属性的值。<br/>
+            </p>
+            <h4 class="text-left">
+                38、position的值relative和absolute定位原点是？
+            </h4>
+            <p class="text-left">
+                absolute<br/>
+                生成绝对定位的元素，相对于值不为 static的第一个父元素进行定位。<br/>
+                fixed （老IE不支持）<br/>
+                生成绝对定位的元素，相对于浏览器窗口进行定位。<br/>
+                relative<br/>
+                生成相对定位的元素，相对于其正常位置进行定位。<br/>
+                static<br/>
+                默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right z-index 声明）。<br/>
+                inherit<br/>
+                规定从父元素继承 position 属性的值。
+            </p>
+            <h4 class="text-left">
+                39、CSS3有哪些新特性？
+            </h4>
+            <p class="text-left">
+                新增各种CSS选择器  （: not(.input)：所有 class 不是“input”的节点）<br/>
+                圆角           （border-radius:8px）<br/>
+                多列布局        （multi-column layout）<br/>
+                阴影和反射        （Shadow\Reflect）<br/>
+                文字特效      （text-shadow、）<br/>
+                文字渲染      （Text-decoration）<br/>
+                线性渐变      （gradient）<br/>
+                旋转          （transform）<br/>
+                增加了旋转,缩放,定位,倾斜,动画，多背景<br/>
+                transform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation:
+            </p>
+            <h4 class="text-left">
+                40、用纯CSS创建一个三角形的原理是什么？
+            </h4>
+            <p class="text-left">
+                把上、左、右三条边隐藏掉（颜色设为 transparent）
+                <pre>
+#demo {
+     width: 0;
+     height: 0;
+     border-width: 20px;
+     border-style: solid;
+     border-color: transparent transparent red transparent;
+}
+                 </pre>
+            </p>
+            <h4 class="text-left">
+                41、 一个满屏 品 字布局 如何设计?
+            </h4>
+            <p class="text-left">
+                简单的方式：
+                上面的div宽100%，
+                下面的两个div分别宽50%，
+                然后用float或者inline使其不换行即可
+            </p>
+            <h4 class="text-left">
+                42、经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？
+            </h4>
+            <p class="text-left">
+                * png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.<br/>
+
+                * 浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。<br/>
+
+                * IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。<br/>
+
+                浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}<br/>
+
+                这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。
+                (_这个符号只有ie6会识别)<br/>
+
+                渐进识别的方式，从总体中逐渐排除局部。<br/>
+
+                首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。<br/>
+                接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。<br/>
+
+                css<br/>
+<pre>
+.bb{
+     background-color:#f1ee18;/*所有识别*/
+     .background-color:#00deff\9; /*IE6、7、8识别*/
+     +background-color:#a200ff;/*IE6、7识别*/
+     _background-color:#1e0bd1;/*IE6识别*/
+}
+</pre>
+                *  IE下,可以使用获取常规属性的方法来获取自定义属性,<br/>
+                也可以使用getAttribute()获取自定义属性;<br/>
+                Firefox下,只能使用getAttribute()获取自定义属性。<br/>
+                解决方法:统一通过getAttribute()获取自定义属性。<br/>
+
+                *  IE下,even对象有x,y属性,但是没有pageX,pageY属性;<br/>
+                Firefox下,event对象有pageX,pageY属性,但是没有x,y属性。<br/>
+
+                *  解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。<br/>
+
+                *  Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,<br/>
+                可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。<br/>
+
+                超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:<br/>
+                L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
+
+            </p>
+            <h4 class="text-left">
+                43、li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？
+            </h4>
+            <p class="text-left">
+                行框的排列会受到中间空白（回车\空格）等的影响，因为空格也属于字符,这些空白也会被应用样式，
+                占据空间，所以会有间隔，把字符大小设为0，就没有空格了。
+            </p>
+            <h4 class="text-left">
+                44、为什么要初始化CSS样式。
+            </h4>
+            <p class="text-left">
+                - 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。<br/>
+
+                - 当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<br/>
+
+                最简单的初始化方法： * {padding: 0; margin: 0;} （强烈不建议）<br/>
+
+                淘宝的样式初始化代码：
+                <pre>
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+                </pre>
+            </p>
+            <h4 class="text-left">
+                45、absolute的containing block(容器块)计算方式跟正常流有什么不同？
+            </h4>
+            <p class="text-left">
+                无论属于哪种，都要先找到其祖先元素中最近的 position 值不为 static 的元素，然后再判断：<br/>
+                1、若此元素为 inline 元素，则 containing block 为能够包含这个元素生成的第一个和最后一个 inline box 的 padding box (除 margin, border 外的区域) 的最小矩形；<br/>
+                2、否则,则由这个祖先元素的 padding box 构成。<br/>
+                如果都找不到，则为 initial containing block。<br/><br/>
+
+                补充：<br/>
+                1. static(默认的)/relative：简单说就是它的父元素的内容框（即去掉padding的部分）<br/>
+                2. absolute: 向上找最近的定位为absolute/relative的元素<br/>
+                3. fixed: 它的containing block一律为根元素(html/body)，根元素也是initial containing block
+            </p>
+            <h4 class="text-left">
+                46、对BFC规范(块级格式化上下文：block formatting context)的理解？
+            </h4>
+            <p class="text-left">
+                （W3C CSS 2.1 规范中的一个概念,它是一个独立容器，决定了元素如何对其内容进行定位,以及与其他元素的关系和相互作用。）
+                一个页面是由很多个 Box 组成的,元素的类型和 display 属性,决定了这个 Box 的类型。<br/>
+                不同类型的 Box,会参与不同的 Formatting Context（决定如何渲染文档的容器）,因此Box内的元素会以不同的方式渲染,也就是说BFC内部的元素和外部的元素不会互相影响。
+            </p>
+            <h4 class="text-left">
+                47、css定义的权重
+            </h4>
+            <p class="text-left">
+                以下是权重的规则：标签的权重为1，class的权重为10，id的权重为100，以下例子是演示各种定义的权重值：
+<pre>
+/*权重为1*/
+div{
+}
+/*权重为10*/
+.class1{
+}
+/*权重为100*/
+#id1{
+}
+/*权重为100+1=101*/
+#id1 div{
+}
+/*权重为10+1=11*/
+.class1 div{
+}
+/*权重为10+10+1=21*/
+.class1 .class2 div{
+}
+</pre>
+            如果权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现
+            </p>
+            <h4 class="text-left">
+                48、使用 CSS 预处理器吗？喜欢那个？
+            </h4>
+            <p class="text-left">
+                SASS (SASS、LESS没有本质区别，只因为团队前端都是用的SASS)
+            </p>
+            <h4 class="text-left">
+                49、什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）
+            </h4>
+            <p class="text-left">
+                如果静态文件都放在主域名下，那静态文件请求的时候都带有的cookie的数据提交给server的，非常浪费流量，
+                所以不如隔离开。<br/>
+
+                因为cookie有域的限制，因此不能跨域提交请求，故使用非主要域名的时候，请求头中就不会带有cookie数据，
+                这样可以降低请求头的大小，降低请求时间，从而达到降低整体请求延时的目的。<br/>
+
+                同时这种方式不会将cookie传入Web Server，也减少了Web Server对cookie的处理分析环节，
+                提高了webserver的http请求的解析速度。
+            </p>
+            <h4 class="text-left">
+                50、什么是CSS 预处理器 / 后处理器？
+            </h4>
+            <p class="text-left">
+                - 预处理器例如：LESS、Sass、Stylus，用来预编译Sass或less，增强了css代码的复用性，
+                还有层级、mixin、变量、循环、函数等，具有很方便的UI组件模块化开发能力，极大的提高工作效率。<br/>
+
+                - 后处理器例如：PostCSS，通常被视为在完成的样式表中根据CSS规范处理CSS，让其更有效；目前最常做的
+                是给CSS属性添加浏览器私有前缀，实现跨浏览器兼容性的问题。
+            </p>
+
+        </div>
+
+        <!--js面试题部分-->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="javascript" style="display: none">
+            <h1 class="page-header">JS部分</h1>
+            <h4 class="text-left">1、使用 typeof bar === "object" 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？</h4>
+            <p class="text-left">使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：
+            <pre class="text-left">
+let obj = {};
+let arr = [];
+
+console.log(typeof obj === 'object'); //true
+console.log(typeof arr === 'object'); //true
+console.log(typeof null === 'object'); //true
+            </pre>
+            从上面的输出结果可知，typeof bar === "object" 并不能准确判断 bar 就是一个 Object。可以通过
+            Object.prototype.toString.call(bar) === "[object Object]" 来避免这种弊端：
+            <pre class="text-left">
+    let obj = {};
+let arr = [];
+
+console.log(Object.prototype.toString.call(obj)); //[object Object]
+console.log(Object.prototype.toString.call(arr)); //[object Array]
+console.log(Object.prototype.toString.call(null)); //[object Null]
+            </pre>
+            另外，为了珍爱生命，请远离 ==：,而 [] === false 是返回 false 的。
+            </p>
+            <h4 class="text-left">2、下面的代码会在 console 输出神马？为什么？</h4>
+            <p class="text-left">
+            <pre class="text-left">
+(function(){
+ var a = b = 3;
+})();
+
+console.log("a defined? " + (typeof a !== 'undefined'));
+console.log("b defined? " + (typeof b !== 'undefined'));
+            </pre>
+            这跟变量作用域有关，输出换成下面的：
+            <pre class="text-left">
+console.log(b); //3
+console,log(typeof a); //undefined
+            </pre>
+            拆解一下自执行函数中的变量赋值：<br/>
+            b = 3;<br/>
+            var a = b;<br/>
+            所以 b 成了全局变量，而 a 是自执行函数的一个局部变量
+            </p>
+            <h4 class="text-left">3、下面的代码会在 console 输出神马？为什么？</h4>
+            <p class="text-left">
+            <pre class="text-left">
+var myObject = {
+ foo: "bar",
+ func: function() {
+ var self = this;
+ console.log("outer func: this.foo = " + this.foo);
+ console.log("outer func: self.foo = " + self.foo);
+ (function() {
+ console.log("inner func: this.foo = " + this.foo);
+ console.log("inner func: self.foo = " + self.foo);
+ }());
+ }
+};
+myObject.func();
+            </pre>
+            第一个和第二个的输出不难判断，在 ES6 之前，JavaScript 只有函数作用域，所以 func 中的 IIFE 有自己的独立
+            作用域，并且它能访问到外部作用域中的 self，所以第三个输出会报错，因为 this 在可访问到的作用域内是 undefined，
+            第四个输出是 bar。如果你知道闭包，也很容易解决的：
+            <pre class="text-left">
+  (function(test) {
+ console.log("inner func: this.foo = " + test.foo); //'bar'
+ console.log("inner func: self.foo = " + self.foo);
+}(self));
+            </pre>
+            如果对闭包不熟悉，可以参考本文：<a href="http://www.jb51.net/article/77144.htm">从作用域链谈闭包</a>
+            </p>
+            <h4 class="text-left">4、将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？</h4>
+            <p class="text-left">
+
+            </p>
+            <h4 class="text-left">2、下面的代码会在 console 输出神马？为什么？</h4>
+            <p class="text-left">
+                换句话说，为什么要用立即执行函数表达式（Immediately-Invoked Function Expression）。
+                IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输出数据项，二是类似于 JQuery/Node 的插件和模块开发
+            <pre class="text-left">
+for(var i = 0; i < 5; i++) {
+ setTimeout(function() {
+ console.log(i);
+ }, 1000);
+}
+            </pre>
+            上面的输出并不是你以为的0，1，2，3，4，而输出的全部是5，这时 IIFE 就能有用了：
+            <pre class="text-left">
+for(var i = 0; i < 5; i++) {
+ (function(i) {
+ setTimeout(function() {
+ console.log(i);
+ }, 1000);
+ })(i)
+}
+            </pre>
+            而在 JQuery/Node 的插件和模块开发中，为避免变量污染，也是一个大大的 IIFE：
+            <pre class="text-left">
+(function($) {
+ //代码
+ } )(jQuery);
+            </pre>
+            </p>
+            <h4 class="text-left">5、在严格模式('use strict')下进行 JavaScript 开发有神马好处？</h4>
+            <p class="text-left">
+                消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
+                消除代码运行的一些不安全之处，保证代码运行的安全；
+                提高编译器效率，增加运行速度；
+                为未来新版本的Javascript做好铺垫。
+            </p>
+            <h4 class="text-left">6、下面两个函数的返回值是一样的吗？为什么？</h4>
+            <p class="text-left">
+            <pre class="text-left">
+function foo1()
+{
+ return {
+ bar: "hello"
+ };
+}
+
+function foo2()
+{
+ return
+ {
+ bar: "hello"
+ };
+}
+            </pre>
+            在编程语言中，基本都是使用分号（;）将语句分隔开，这可以增加代码的可读性和整洁性。而在JS中，如若语句各占独立一行，通常可以省略语句间的分号（;），
+            JS 解析器会根据能否正常编译来决定是否自动填充分号：
+            <pre class="text-left">
+var test = 1 +
+2
+console.log(test); //3
+            </pre>
+            在上述情况下，为了正确解析代码，就不会自动填充分号了，但是对于 return 、break、continue 等语句，如果后面紧跟换行，解析器一定会自动在后面填充分号(;)，
+            所以上面的第二个函数就变成了这样：
+            <pre class="text-left">
+function foo2()
+{
+ return;
+ {
+ bar: "hello"
+ };
+}
+            </pre>
+            所以第二个函数是返回 undefined
+
+            </p>
+            <h4 class="text-left">7、神马是 NaN，它的类型是神马？怎么测试一个值是否等于 NaN?</h4>
+            <p class="text-left">
+                NaN 是 Not a Number 的缩写，JavaScript 的一种特殊数值，其类型是 Number，可以通过 isNaN(param)
+                来判断一个值是否是 NaN：
+            <pre class="text-left">
+console.log(isNaN(NaN)); //true
+console.log(isNaN(23)); //false
+console.log(isNaN('ds')); //true
+console.log(isNaN('32131sdasd')); //true
+console.log(NaN === NaN); //false
+console.log(NaN === undefined); //false
+console.log(undefined === undefined); //false
+console.log(typeof NaN); //number
+console.log(Object.prototype.toString.call(NaN)); //[object Number]
+            </pre>
+            ES6 中，isNaN() 成为了 Number 的静态方法：Number.isNaN().
+
+            </p>
+            <h4 class="text-left">8、解释一下下面代码的输出</h4>
+            <p class="text-left">
+            <pre class="text-left">
+console.log(0.1 + 0.2); //0.30000000000000004
+console.log(0.1 + 0.2 == 0.3); //false
+            </pre>
+            JavaScript 中的 number 类型就是浮点型，JavaScript 中的浮点数采用IEEE-754 格式的规定，这是一种二进制表示法，可以精确地表示分数，比如1/2，1/8，1/1024，每个浮点数占64位。但是，
+            二进制浮点数表示法并不能精确的表示类似0.1这样 的简单的数字，会有舍入误差。<br/><br/>
+            由于采用二进制，JavaScript 也不能有限表示 1/10、1/2 等这样的分数。在二进制中，1/10(0.1)被表示为 0.00110011001100110011…… 注意 0011 是无限重复的，这是舍入误差造成的，
+            所以对于 0.1 + 0.2 这样的运算，操作数会先被转成二进制，然后再计算：<br/><br/>
+            0.1 => 0.0001 1001 1001 1001…（无限循环）<br/><br/>
+            0.2 => 0.0011 0011 0011 0011…（无限循环）<br/><br/>
+            双精度浮点数的小数部分最多支持 52 位，所以两者相加之后得到这么一串 0.0100110011001100110011001100110011001100…因浮点数小数位的限制而截断的二进制数字，这时候，再把它转换为十进制，
+            就成了 0.30000000000000004。<br/><br/>
+            对于保证浮点数计算的正确性，有两种常见方式。<br/><br/>
+            一是先升幂再降幂：<br/><br/>
+            <pre class="text-left">
+consofunction add(num1, num2){
+ let r1, r2, m;
+ r1 = (''+num1).split('.')[1].length;
+ r2 = (''+num2).split('.')[1].length;
+
+ m = Math.pow(10,Math.max(r1,r2));
+ return (num1 * m + num2 * m) / m;
+}
+console.log(add(0.1,0.2)); //0.3
+console.log(add(0.15,0.2256)); //0.3756
+            </pre>
+            二是是使用内置的 toPrecision() 和 toFixed() 方法，注意，方法的返回值字符串。
+            <pre class="text-left">
+function add(x, y) {
+ return x.toPrecision() + y.toPrecision()
+}
+console.log(add(0.1,0.2)); //"0.10.2"
+            </pre>
+
+            </p>
+            <h4 class="text-left">9、实现函数 isInteger(x) 来判断 x 是否是整数</h4>
+            <p class="text-left">
+                可以将 x 转换成10进制，判断和本身是不是相等即可：
+            <pre class="text-left">
+function isInteger(x) {
+ return parseInt(x, 10) === x;
+}
+            </pre>
+            ES6 对数值进行了扩展，提供了静态方法 isInteger() 来判断参数是否是整数：
+            <pre class="text-left">
+Number.isInteger(25) // true
+Number.isInteger(25.0) // true
+Number.isInteger(25.1) // false
+Number.isInteger("15") // false
+Number.isInteger(true) // false
+            </pre>
+            JavaScript能够准确表示的整数范围在 -2^53 到 2^53 之间（不含两个端点），超过这个范围，无法精确表示这个值。ES6 引入了Number.MAX_SAFE_INTEGER 和 Number.MIN_SAFE_INTEGER这两个常量，
+            用来表示这个范围的上下限，并提供了 Number.isSafeInteger() 来判断整数是否是安全型整数。
+            </p>
+            <h4 class="text-left">10、在下面的代码中，数字 1-4 会以什么顺序输出？为什么会这样输出？</h4>
+            <p class="text-left">
+            <pre class="text-left">
+(function() {
+ console.log(1);
+ setTimeout(function(){console.log(2)}, 1000);
+ setTimeout(function(){console.log(3)}, 0);
+ console.log(4);
+})();
+            </pre>
+            这个就不多解释了，主要是 JavaScript 的定时机制和时间循环，不要忘了，JavaScript 是单线程的。
+            详解可以参考 从setTimeout谈JavaScript运行机制。
+            </p>
+            <h4 class="text-left">11、写一个少于 80 字符的函数，判断一个字符串是不是回文字符串</h4>
+            <p class="text-left">
+            <pre class="text-left">
+function isPalindrome(str) {
+ str = str.replace(/\W/g, '').toLowerCase();
+ return (str == str.split('').reverse().join(''));
+}
+            </pre>
+            这个题我在 codewars 上碰到过，并收录了一些不错的解决方式，可以戳这里：Palindrome For Your Dome
+            </p>
+            <h4 class="text-left">12、写一个按照下面方式调用都能正常工作的 sum 方法</h4>
+            <p class="text-left">
+            <pre class="text-left">
+console.log(sum(2,3)); // Outputs 5
+console.log(sum(2)(3)); // Outputs 5
+            </pre>
+            针对这个题，可以判断参数个数来实现：
+            <pre class="text-left">
+function sum() {
+ var fir = arguments[0];
+ if(arguments.length === 2) {
+ return arguments[0] + arguments[1]
+ } else {
+ return function(sec) {
+ return fir + sec;
+ }
+ }
+
+}
+            </pre>
+
+            </p>
+            <h4 class="text-left">13、根据下面的代码片段回答后面的问题</h4>
+            <p class="text-left">
+            <pre class="text-left">
+for (var i = 0; i < 5; i++) {
+ var btn = document.createElement('button');
+ btn.appendChild(document.createTextNode('Button ' + i));
+ btn.addEventListener('click', function(){ console.log(i); });
+ document.body.appendChild(btn);
+}
+            </pre>
+            1、点击 Button 4，会在控制台输出什么？<br/>
+            2、给出一种符合预期的实现方式<br/>
+            1、点击5个按钮中的任意一个，都是输出5<br/>
+            2、参考 IIFE。<br/>
+
+            </p>
+            <h4 class="text-left">14、下面的代码会输出什么？为什么？</h4>
+            <p class="text-left">
+            <pre class="text-left">
+var arr1 = "john".split(''); j o h n
+var arr2 = arr1.reverse(); n h o j
+var arr3 = "jones".split(''); j o n e s
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+            </pre>
+            会输出什么呢？你运行下就知道了，可能会在你的意料之外。<br/>
+            reverse() 会改变数组本身，并返回原数组的引用。<br/>
+            slice 的用法请参考：slice<br/>
+
+            </p>
+            <h4 class="text-left">15、下面的代码会输出什么？为什么？</h4>
+            <p class="text-left">
+            <pre class="text-left">
+console.log(1 + "2" + "2");
+console.log(1 + +"2" + "2");
+console.log(1 + -"1" + "2");
+console.log(+"1" + "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+            </pre>
+            输出什么，自己去运行吧，需要注意三个点：<br/>
+            多个数字和数字字符串混合运算时，跟操作数的位置有关
+            <pre class="text-left">
+console.log(2 + 1 + '3'); / /‘33'
+console.log('3' + 2 + 1); //'321'
+
+            </pre>
+            数字字符串之前存在数字中的正负号(+/-)时，会被转换成数字
+            <pre class="text-left">
+console.log(typeof '3'); // string
+console.log(typeof +'3'); //number
+
+            </pre>
+            同样，可以在数字前添加 ''，将数字转为字符串
+            <pre class="text-left">
+console.log(typeof 3); // number
+console.log(typeof (''+3)); //string
+
+            </pre>
+            对于运算结果不能转换成数字的，将返回 NaN
+            <pre class="text-left">
+console.log('a' * 'sd'); //NaN
+console.log('A' - 'B'); // NaN
+
+            </pre>
+            如果 list 很大，下面的这段递归代码会造成堆栈溢出。如果在不改变递归模式的前提下修善这段代码？
+            <pre class="text-left">
+var list = readHugeList();
+
+var nextListItem = function() {
+ var item = list.pop();
+
+ if (item) {
+ // process the list item...
+ nextListItem();
+ }
+};
+
+            </pre>
+            原文上的解决方式是加个定时器
+            <pre class="text-left">
+var list = readHugeList();
+
+var nextListItem = function() {
+ var item = list.pop();
+
+ if (item) {
+ // process the list item...
+ setTimeout( nextListItem, 0);
+ }
+};
+
+            </pre>
+            解决方式的原理请参考第10题。
+
+            </p>
+            <h4 class="text-left">17、什么是闭包？举例说明</h4>
+            <p class="text-left">
+            <pre class="text-left">
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+            </pre>
+            逻辑与和逻辑或运算符会返回一个值，并且二者都是短路运算符：<br/>
+            逻辑与返回第一个是 false 的操作数 或者 最后一个是 true的操作数
+            <pre class="text-left">
+console.log(1 && 2 && 0); //0
+console.log(1 && 0 && 1); //0
+console.log(1 && 2 && 3); //3
+            </pre>
+            如果某个操作数为 false，则该操作数之后的操作数都不会被计算<br/>
+            逻辑或返回第一个是 true 的操作数 或者 最后一个是 false的操作数
+            <pre class="text-left">
+console.log(1 || 2 || 0); //1
+console.log(0 || 2 || 1); //2
+console.log(0 || 0 || false); //false
+            </pre>
+            如果某个操作数为 true，则该操作数之后的操作数都不会被计算<br/>
+            如果逻辑与和逻辑或作混合运算，则逻辑与的优先级高：
+            <pre class="text-left">
+console.log(1 && 2 || 0); //2
+console.log(0 || 2 && 1); //1
+console.log(0 && 2 || 1); //1
+            </pre>
+            在 JavaScript，常见的 false 值：<br/>
+            0, '0', +0, -0, false, '',null,undefined,null,NaN<br/>
+            要注意空数组([])和空对象({}):
+            <pre class="text-left">
+console.log([] == false) //true
+console.log({} == false) //false
+console.log(Boolean([])) //true
+console.log(Boolean({})) //true
+            </pre>
+            所以在 if 中，[] 和 {} 都表现为 true：
+
+            </p>
+            <h4 class="text-left">20、解释下面代码的输出</h4>
+            <p class="text-left">
+            <pre class="text-left">
+console.log(false == '0')
+console.log(false === '0')
+            </pre>
+            请参考前面第14题运算符转换规则的图。
+            </p>
+            <h4 class="text-left">21、解释下面代码的输出</h4>
+            <p class="text-left">
+            <pre class="text-left">
+var a={},
+ b={key:'b'},
+ c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+            </pre>
+            输出是456。
+            </p>
+            <h4 class="text-left">22、解释下面代码的输出</h4>
+            <p class="text-left">
+            <pre class="text-left">
+console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
+            </pre>
+            结果是10的阶乘。这是一个递归调用，为了简化，我初始化 n=5，则调用链和返回链如下：
+            <pre class="text-left">
+调用链:n = 5 => 5*f(4) => 4*f(3)=> 3*f(2)=> 2*f(1)
+返回链:2*f(1) = 2*1 => 3*2*1 => 4*3*2*1 => 5*4*3*2*1
+            </pre>
+
+            </p>
+            <h4 class="text-left">23、解释下面代码的输出</h4>
+            <p class="text-left">
+            <pre class="text-left">
+(function(x) {
+ return (function(y) {
+ console.log(x);
+ })(2)
+})(1);
+            </pre>
+            输出1，闭包能够访问外部作用域的变量或参数。
+
+            </p>
+            <h4 class="text-left">24、解释下面代码的输出，并修复存在的问题</h4>
+            <p class="text-left">
+            <pre class="text-left">
+var hero = {
+ _name: 'John Doe',
+ getSecretIdentity: function (){
+ return this._name;
+ }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;
+
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+            </pre>
+            将 getSecretIdentity 赋给 stoleSecretIdentity，等价于定义了 stoleSecretIdentity 函数：
+            <pre class="text-left">
+var stoleSecretIdentity = function (){
+ return this._name;
+}
+stoleSecretIdentity
+            </pre>
+            的上下文是全局环境，所以第一个输出 undefined。若要输出 John Doe，则要通过 call 、apply 和 bind
+            等方式改变 stoleSecretIdentity 的this 指向(hero)。<br/>
+            第二个是调用对象的方法，输出 John Doe。
+            </p>
+            <h4 class="text-left">25、给你一个 DOM 元素，创建一个能访问该元素所有子元素的函数，并且要将每个子元素传递给指定的回调函数。</h4>
+            <p class="text-left">
+                函数接受两个参数：<br/><br/>
+                DOM<br/><br/>
+                指定的回调函数<br/>
+                原文利用 深度优先搜索(Depth-First-Search) 给了一个实现：<br/>
+            <pre class="text-left">
+var stolfunction Traverse(p_element,p_callback) {
+ p_callback(p_element);
+ var list = p_element.children;
+ for (var i = 0; i < list.length; i++) {
+ Traverse(list[i],p_callback); // recursive call
+ }
+}
+            </pre>
+
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="./dist/js/index.js" type="text/javascript"></script>
+
+</body>
+</html>

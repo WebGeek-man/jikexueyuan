@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+
+    <script>
+
+      function buttonclicked() {
+         var inputText = document.getElementById('input');
+
+          getTheStudentsLevel(inputText.value);
+
+
+      }
+
+     // 计算等级函数
+      function getTheStudentsLevel(score) {
+          var myScore = parseInt(score);
+          if (myScore>90&&myScore<=100){
+              alert("一等生")
+          } else if(myScore>80&&myScore<=90){
+              alert("二等生")
+          }else if(myScore>70&&myScore<=80){
+              alert("三等生")
+          }else if(myScore>60&&myScore<=70){
+              alert("四等生")
+          }else if(myScore>50&&myScore<=60){
+              alert("五等生")
+          }else if(myScore>40&&myScore<=50){
+              alert("六等生")
+          }else if(myScore>30&&myScore<=40){
+              alert("七等生")
+          }else if(myScore>20&&myScore<=30){
+              alert("八等生")
+          }else if(myScore>10&&myScore<=20){
+              alert("九等生")
+          }else if(myScore>0&&myScore<=10){
+              alert("十等生")
+          } else {
+              alert("您输入的数字不合法,请输入0~100以内的数字");
+          }
+      }
+    </script>
+
+</head>
+<body>
+
+请输入学员成绩：<input type="text" id="input" >
+<button onclick="buttonclicked()">查看</button>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+
+
+/*设置页面主体部分*/
+.content .content-search{
+    width: 950px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    z-index: 0 !important;
+    min-width: 1000px;
+    margin-top: 50px;
+}
+
+.content-search-padding{
+    padding-top: 140px !important;
+}
+
+.content .content-search .content-tab{
+    width: 100%;
+    height: 40px;
+    line-height: 38px;
+    border: 1px solid #999;
+}
+
+.content .content-search .content-tab span{
+    display: block;
+    float: left;
+    height: 40px;
+    width: auto;
+    line-height: 40px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.content .content-search .content-tab .tab-setting{
+    float: right;
+    width: 18px;
+    height: 18px;
+    margin: 11px 15px 0 0;
+    padding: 0;
+    overflow: hidden;
+    background: url(../images/card_setts_fdb17359.png) no-repeat -121px -49px;
+    background-color: #fff;
+
+}
+
+.content .content-search .content-tab .tab-setting:hover{
+    background-position: -121px -73px;
+    background-color: #fff;
+}
+
+
+.content .content-search .content-tab span i{
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    background: url("../images/card_setts_fdb17359.png") no-repeat -15px 0;
+}
+
+.content .content-search .content-tab span:hover i{
+    background-position: -144px 0;
+}
+
+.content .content-search .content-tab span:hover{
+    background-color: rgb(164,167,173);
+}
+
+.span-selected{
+    background-color: rgb(114,116,120);
+    color: #fff;
+}
+
+/*以下是正文的内容部分*/
+.content .content-search .content-wrapper{
+    width: 1000px;
+    height: auto;
+    border: 1px solid #999;
+    border-top: none;
+}
+
+
+.content .content-search .content-wrapper .subject-one,
+.content .content-search .content-wrapper .subject-two,
+.content .content-search .content-wrapper .subject-three,
+.content .content-search .content-wrapper .subject-four{
+    width: 950px;
+    min-height: 300px;
+    padding: 25px;
+    display: none;
+    position: relative;
+}
+
+.content .content-search .content-wrapper .content-show{
+    display: block;
+    background-color: #fff;
+}
+
+/*设置推荐相关的内容*/
+.content .content-search .content-wrapper .subject-three .subject-left{
+    width: 550px;
+    height: auto;
+
+}
+
+.content .content-search .content-wrapper .subject-three .subject-left .content-news{
+    width: 550px;
+    height: 160px;
+    border-bottom: 1px solid #f2f2f2;
+    /*background-color: #999999;*/
+}
+
+.content .content-search .content-wrapper .subject-three .subject-left .content-news .content-news-img{
+    width: 175px;
+    height: 160px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    float: left;
+}
+
+.content .content-search .content-wrapper .subject-three .subject-left .content-news .content-news-tt{
+    width: 370px;
+    height: 160px;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    float: left;
+}
+
+.content .content-search .content-wrapper .subject-three .subject-left .content-news .content-news-tt h3{
+    margin-bottom: 10px;
+}
+
+.content .content-search .content-wrapper .subject-three .subject-left .content-news .content-news-tt a{
+    color: #111;
+    text-decoration: none;
+}
+
+.content .content-search .content-wrapper .subject-three .subject-left .content-news .content-news-tt span{
+    font-size: 14px;
+    color: #999999;
+}
+
+.content .content-search .content-wrapper .subject-three .subject-right{
+    margin-top: 20px;
+    width: 400px;
+    height: auto;
+    /*background-color: #727272;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+.content .content-search .content-wrapper .subject-three .subject-right p{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    height: 30px;
+    font-size: 15px;
+
+}
+
+
+.content .content-search .content-wrapper .subject-three .subject-right a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 198px;
+    height: 30px;
+    padding-left: 20px;
+    text-align: left;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.content .content-search .content-wrapper .subject-three .subject-right a:hover{
+    color: #060871;
+    text-decoration: underline;
+}
+
+/*设置导航栏目*/
+.content .content-search .content-wrapper .subject-two .subject-two-tt{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.content .content-search .content-wrapper .subject-two .subject-two-tt h4{
+    width: 100%;
+}
+
+.content .content-search .content-wrapper .subject-two .subject-two-tt a{
+    display: inline-block;
+    width: 128px;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    line-height: 60px;
+    background-color: #f2f2f2;
+    margin: 10px;
+    color: #555;
+}

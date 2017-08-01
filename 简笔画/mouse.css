@@ -1,0 +1,224 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mouse{
+    width: 200px;
+    height: 400px;
+    /*background-color: #727272;*/
+}
+
+#mouse_head{
+    width: 200px;
+    height: 200px;
+    background-color: #8f9595;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    top: 122px;
+    left: 239px;
+}
+
+#mouse_ear_left{
+    width: 75px;
+    height: 75px;
+    border: 12px solid #6e6e6e;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #e5a95f;
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 220px;
+}
+
+#mouse_ear_right{
+    width: 75px;
+    height: 75px;
+    border: 12px solid #6e6e6e;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #e5a95f;
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 368px;
+}
+
+#mouse_eye_left_outer{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    top: 163px;
+    left: 282px;
+
+}
+
+#mouse_eye_right_outer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 163px;
+    left: 361px;
+    background: #fff;
+    border-radius: 50px;
+    -webkit-border-radius: 50%;
+}
+
+#mouse_eye_left_inner {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 179px;
+    left: 301px;
+    background: #000;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#mouse_eye_right_inner {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 179px;
+    left: 382px;
+    background: black;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#mouse_nose {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 220px;
+    left: 315px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #6E6E6E;
+    z-index: 1;
+}
+
+#mouse_whisker_left_1 {
+    width: 80px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 228px;
+    left: 250px;
+    -webkit-transform: rotate(10deg);
+}
+
+#mouse_whisker_left_2 {
+    width: 80px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 234px;
+    left: 249px
+}
+
+#mouse_whisker_left_3 {
+    width: 80px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 242px;
+    left: 250px;
+    -webkit-transform: rotate(-10deg);
+}
+
+#mouse_whisker_right_1 {
+    width: 80px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 230px;
+    left: 334px;
+    -webkit-transform: rotate(-10deg);
+}
+
+#mouse_whisker_right_2 {
+    width: 80px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 236px;
+    left: 344px;
+}
+
+#mouse_whisker_right_3 {
+    width: 80px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 244px;
+    left: 340px;
+    -webkit-transform: rotate(10deg);
+}
+
+#mouse_tooth_left {
+    width: 15px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    top: 278px;
+    left: 321px;
+    -webkit-transform: rotate(10deg);
+}
+
+#mouse_tooth_right {
+    width: 15px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    top: 278px;
+    left: 340px;
+    -webkit-transform: rotate(-10deg);
+}
+
+
+#mouse_eye_left_inner,#mouse_eye_right_inner{
+    animation: mouse_eye_anmation 10s linear infinite;
+    -webkit-animation: mouse_eye_anmation 10s linear infinite;
+}
+
+
+@keyframes mouse_eye_anmation{
+    0% { -webkit-transform:translate(0,0);}
+    5% { -webkit-transform:translate(-10px,0);}
+    10% { -webkit-transform:translate(0,0);}
+    90% { -webkit-transform:translate(-10px,0);}
+    95% { -webkit-transform:translate(0,0);}
+    100%{ -webkit-transform:translate(0,0);}
+}
+
+@-webkit-keyframes mouse_eye_anmation{
+    0% { -webkit-transform:translate(0,0);}
+    5% { -webkit-transform:translate(-10px,0);}
+    10% { -webkit-transform:translate(0,0);}
+    90% { -webkit-transform:translate(-10px,0);}
+    95% { -webkit-transform:translate(0,0);}
+    100%{ -webkit-transform:translate(0,0);}
+}
+

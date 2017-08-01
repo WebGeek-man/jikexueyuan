@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+
+<script>
+
+
+    /**
+     * 通过JavaScript代码找到给定数组[“a“，”x“，”b“，”d“，”m“，”a“，”k，“m”，“p”，“j”，“a”]中
+     * （1）出现次数最多的字母，
+     * （2）并给出其出现的总次数以及（
+     * 3）出现次数最多的这个字母每一个所在的位置，即索引下标。
+     */
+
+    var array =  ['a','x','a','d','a','d','d'];
+    
+    function getMaxLetterAndIndex(array) {
+        var obj = {};
+        array.forEach(function (item,index,arr) {
+            if (!obj[item]){
+                obj[item] = [index]
+            } else {
+                obj[item].push(index)
+            }
+        });
+//        console.log(obj);
+        var nun = 0;//记录出现次数最大值
+        var maxLetter = {};//记录出现次数最多的字符
+        var maxArray = null;//返回最大值的位置数组
+        for(var item in obj){
+            var temp = obj[item];
+            if (temp.length == nun){
+                maxLetter[item] = temp;
+            } else if (temp.length > nun){
+                nun = temp.length;
+                maxLetter = {};
+                maxLetter[item] = temp;
+            }
+        }
+
+        return maxLetter;
+    }
+    //打印结果
+    console.log(getMaxLetterAndIndex(array));
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d魔方</title>
+    <link href="RubikCube.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!--//舞台元素，设置perspective，让其子元素获得透视效果。-->
+<div class="rect-wrap">
+    <!--//容器，设置transform-style: preserve-3d，让其子元素在3D空间呈现-->
+    <div class="container">
+        <!--//立方体的六个面-->
+        <div class="top slide">
+            <table cellpadding="1" cellspacing="1" >
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div>黄</div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom slide" >
+            <table  cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div>圣</div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="left slide" >
+            <table  cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div>嘉</div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="right slide" >
+            <table   cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div>黄</div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="front slide" >
+            <table   cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div>圣</div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="back slide" >
+            <table   cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div>嘉</div></td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                    <td><div></div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
